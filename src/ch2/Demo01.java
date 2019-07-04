@@ -13,7 +13,7 @@ public class Demo01 {
 
     private void add10K() {
         int idx = 0;
-        while (idx++ < 50000) {
+        while (idx++ < 10000) {
             count += 1;
         }
     }

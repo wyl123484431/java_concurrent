@@ -6,7 +6,7 @@ import java.util.Date;
  * @author: yuliangw
  * @version: v2.0
  * @description: 应该重置一下中断标示，因为抛出异常后，中断标示会自动清除掉！
- * @date:2019/7/3
+ * @date:2019/5/3
  */
 public class Demo02 {
 
