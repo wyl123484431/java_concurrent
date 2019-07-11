@@ -14,8 +14,8 @@ public class Demo01 {
             ts.start();
             try {
                 Thread.sleep(3000);
-                // ts.stop();
-                ts.interrupt();
+                //ts.stop();
+                 ts.interrupt();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -28,7 +28,7 @@ class ThreadStop extends Thread {
         System.out.println("开始执行：" + new Date());
             System.out.println(1111);
         try {
-            Thread.sleep(3000);
+            Thread.sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

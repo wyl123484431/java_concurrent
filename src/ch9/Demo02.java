@@ -15,7 +15,7 @@ public class Demo02 {
         ts.start();
         // 你超过三秒不醒过来，我就干死你
         try {
-             Thread.sleep(3000);
+             Thread.sleep(1000);
              // ts.
             // ts.stop();
              ts.interrupt();
@@ -37,8 +37,9 @@ class ThreadStop1 extends Thread {
             }
             // 省略业务代码无数
             try {
-                Thread.sleep(100);
+                Thread.sleep(2000);
             }catch (InterruptedException e){
+                Thread.currentThread().interrupt();
                 e.printStackTrace();
             }
         }
