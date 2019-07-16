@@ -13,5 +13,11 @@ import java.util.function.Function;
  */
 public class Demo02 {
 
-
+    public static void main(String[] args) {
+        int a = 155;
+        int b = 156-1;
+        System.out.println(a==b);
+    }
 }
+
+
