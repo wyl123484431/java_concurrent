@@ -16,10 +16,8 @@ class Demo01 {
         private final Object pwLock
                 = new Object();
 
-
         // 账户余额
         private Integer balance;
-
         // 账户密码
         private String password;
 
@@ -37,7 +35,6 @@ class Demo01 {
                 return balance;
             }
         }
-
         // 更改密码
         void updatePassword(String pw){
             synchronized(pwLock) {

@@ -29,10 +29,10 @@ class SafeCalc {
         SafeCalc test = new SafeCalc();
         // 创建两个线程，执行 add() 操作
         Thread th1 = new Thread(() -> {
-            test.addOne();
+            test.add10K();
         });
         Thread th2 = new Thread(() -> {
-            test.addOne();
+            test.add10K();
         });
         // 启动两个线程
         th1.start();

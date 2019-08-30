@@ -12,7 +12,6 @@ public class Demo03 {
 
         private Object lock;
         private int balance;
-
         // 创建 Account 时传入同一个 lock 对象
         public Account(Object lock) {
             this.lock = lock;

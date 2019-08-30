@@ -12,13 +12,10 @@ import java.util.concurrent.CountDownLatch;
  */
 public class MyLock {
 
-
     public static void main(String[] args) throws InterruptedException {
         Account src = new Account(10000);
         Account target = new Account(10000);
-
         CountDownLatch countDownLatch = new CountDownLatch(10);
-
         for (int i = 0; i < 10; i++) {
             new Thread(()->{
                 src.transactionToTarget(1,target);
@@ -26,7 +23,6 @@ public class MyLock {
             }).start();
         }
         countDownLatch.await();
-
         System.out.println("src="+src.getBanalce() );
         System.out.println("target="+target.getBanalce() );
     }
@@ -36,7 +32,6 @@ public class MyLock {
             this.banalce = banalce;
         }
         private Integer banalce;
-
         // 转账方法
         public void transactionToTarget(Integer money,Account target) {
             Allocator.getInstance().apply(this, target);
@@ -44,8 +39,6 @@ public class MyLock {
             target.setBanalce(target.getBanalce() + money);
             Allocator.getInstance().release(this, target);
         }
-
-
         public Integer getBanalce() {
             return banalce;
         }
@@ -56,10 +49,8 @@ public class MyLock {
     // 单例锁类
     static class Allocator {
         private Allocator(){
-
         }
         private List<Account> locks = new ArrayList<>();
-
         public synchronized void apply(Account src,Account tag){
             System.out.println("src: "+src+"  ---   tag: "+tag);
             while (locks.contains(src)||locks.contains(tag)) {

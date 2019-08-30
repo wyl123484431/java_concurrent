@@ -9,7 +9,6 @@ package ch5;
 public class Demo02 {
     // 账户类
     class Account {
-
         private int balance;
         // 转账   target用户
        synchronized void transfer(Account target, int amt){
